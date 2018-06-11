@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="366.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <Pane layoutX="-503.0" layoutY="-335.0" prefHeight="548.0" prefWidth="984.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="getCode" layoutX="742.0" layoutY="313.0" mnemonicParsing="false" onAction="#getCode" prefHeight="38.0" prefWidth="131.0" text="Get Code" />
+            <Pane layoutX="235.0" layoutY="14.0" prefHeight="166.0" prefWidth="221.0">
+               <children>
+                  <RadioButton fx:id="con_if" layoutX="15.0" layoutY="40.0" mnemonicParsing="false" onAction="#process_conditionalLogic" text="If Statement" />
+                  <RadioButton fx:id="con_ifElse" layoutX="15.0" layoutY="60.0" mnemonicParsing="false" onAction="#process_conditionalLogic" text="If / else Statement" />
+                  <RadioButton fx:id="con_if_ifElse_else" layoutX="15.0" layoutY="80.0" mnemonicParsing="false" onAction="#process_conditionalLogic" prefHeight="17.0" prefWidth="131.0" text="if  / if else / else" />
+                  <Label layoutX="54.0" layoutY="14.0" text="Conditional Logic" />
+                  <RadioButton fx:id="con_switch" layoutX="15.0" layoutY="120.0" mnemonicParsing="false" onAction="#process_conditionalLogic" prefHeight="17.0" prefWidth="131.0" text="switch statement" />
+               </children>
+            </Pane>
+            <Pane layoutX="217.0" layoutY="180.0" prefHeight="166.0" prefWidth="221.0">
+               <children>
+                  <RadioButton fx:id="loop_for" layoutX="15.0" layoutY="40.0" mnemonicParsing="false" onAction="#process_loop" text="for loop" />
+                  <RadioButton fx:id="loop_while" layoutX="15.0" layoutY="100.0" mnemonicParsing="false" onAction="#process_loop" text="while loop" />
+                  <RadioButton fx:id="loop_doWhile" layoutX="15.0" layoutY="120.0" mnemonicParsing="false" onAction="#process_loop" prefHeight="17.0" prefWidth="131.0" text="do while  loop" />
+                  <Label layoutX="95.0" layoutY="14.0" text="Loops" />
+                  <RadioButton fx:id="loop_enhancedFor" layoutX="15.0" layoutY="60.0" mnemonicParsing="false" onAction="#process_loop" prefHeight="17.0" prefWidth="131.0" text="enhanced for loop" />
+               </children>
+            </Pane>
+            <Pane layoutX="438.0" layoutY="20.0" prefHeight="154.0" prefWidth="221.0">
+               <children>
+                  <RadioButton fx:id="class_empty" layoutX="15.0" layoutY="40.0" mnemonicParsing="false" onAction="#process_class" text="empty" />
+                  <Label layoutX="97.0" layoutY="6.0" text="Class" />
+                  <RadioButton fx:id="class_emptyWithConstructor" layoutX="15.0" layoutY="60.0" mnemonicParsing="false" onAction="#process_class" text="empty with constructor" />
+               </children>
+            </Pane>
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="382.0" prefWidth="221.0">
+               <children>
+                  <RadioButton fx:id="var_int" layoutX="15.0" layoutY="70.0" mnemonicParsing="false" onAction="#process_variables" text="int" />
+                  <Label layoutX="81.0" layoutY="6.0" text="Variables" />
+                  <RadioButton fx:id="var_double" layoutX="15.0" layoutY="90.0" mnemonicParsing="false" onAction="#process_variables" text="double" />
+                  <RadioButton fx:id="var_string" layoutX="15.0" layoutY="110.0" mnemonicParsing="false" onAction="#process_variables" text="Strting" />
+                  <RadioButton fx:id="var_boolean" layoutX="15.0" layoutY="130.0" mnemonicParsing="false" onAction="#process_variables" text="boolean" />
+                  <RadioButton fx:id="var_char" layoutX="15.0" layoutY="50.0" mnemonicParsing="false" onAction="#process_variables" text="char" />
+                  <CheckBox fx:id="collection_array" layoutX="14.0" layoutY="220.0" mnemonicParsing="false" onAction="#process_variables" text="array" />
+                  <CheckBox fx:id="collection_arrayList" layoutX="15.0" layoutY="240.0" mnemonicParsing="false" onAction="#process_variables" text="arrayList" />
+                  <CheckBox fx:id="collection_list" layoutX="15.0" layoutY="260.0" mnemonicParsing="false" onAction="#process_variables" text="list" />
+                  <Label layoutX="73.0" layoutY="193.0" prefHeight="17.0" prefWidth="65.0" text="Collections" />
+                  <Label layoutX="11.0" layoutY="23.0" text="Data Type" />
+               </children>
+            </Pane>
+            <Pane layoutX="446.0" layoutY="163.0" prefHeight="166.0" prefWidth="213.0">
+               <children>
+                  <RadioButton fx:id="method_void" layoutX="15.0" layoutY="60.0" mnemonicParsing="false" onAction="#process_method" prefHeight="17.0" prefWidth="63.0" text="void" />
+                  <RadioButton fx:id="method_withReturn" layoutX="15.0" layoutY="120.0" mnemonicParsing="false" onAction="#process_method" text="with return" />
+                  <RadioButton fx:id="method_returnAndArgument" layoutX="15.0" layoutY="140.0" mnemonicParsing="false" onAction="#process_method" prefHeight="17.0" prefWidth="178.0" text="with return and arguments" />
+                  <Label layoutX="87.0" layoutY="14.0" text="Methods" />
+                  <RadioButton fx:id="method_withArgument" layoutX="15.0" layoutY="80.0" mnemonicParsing="false" onAction="#process_method" prefHeight="17.0" prefWidth="131.0" text="void with argument" />
+                  <RadioButton fx:id="method_constructor" layoutX="15.0" layoutY="40.0" mnemonicParsing="false" onAction="#process_method" prefHeight="17.0" prefWidth="99.0" text="Constructor" />
+               </children>
+            </Pane>
+            <TextArea fx:id="textWindow" layoutX="677.0" layoutY="82.0" prefHeight="221.0" prefWidth="261.0" />
+            <Label layoutX="789.0" layoutY="20.0" text="Output" />
+            <RadioButton fx:id="systemOut" layoutX="740.0" layoutY="44.0" mnemonicParsing="false" onAction="#process_output" text="System.out.println(&quot;&quot;);" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
